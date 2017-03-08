@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCA0F5641E70932400D0AA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0F5631E70932400D0AA44 /* AppDelegate.swift */; };
+		FCA0F5661E70932400D0AA44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0F5651E70932400D0AA44 /* ViewController.swift */; };
+		FCA0F5691E70932400D0AA44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA0F5671E70932400D0AA44 /* Main.storyboard */; };
+		FCA0F56C1E70932400D0AA44 /* kalender3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCA0F56A1E70932400D0AA44 /* kalender3.xcdatamodeld */; };
+		FCA0F56E1E70932400D0AA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA0F56D1E70932400D0AA44 /* Assets.xcassets */; };
+		FCA0F5711E70932400D0AA44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA0F56F1E70932400D0AA44 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FCA0F5601E70932400D0AA44 /* kalender3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kalender3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA0F5631E70932400D0AA44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCA0F5651E70932400D0AA44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCA0F5681E70932400D0AA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCA0F56B1E70932400D0AA44 /* kalender3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kalender3.xcdatamodel; sourceTree = "<group>"; };
+		FCA0F56D1E70932400D0AA44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCA0F5701E70932400D0AA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCA0F5721E70932500D0AA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCA0F55D1E70932400D0AA44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCA0F5571E70932400D0AA44 = {
+			isa = PBXGroup;
+			children = (
+				FCA0F5621E70932400D0AA44 /* kalender3 */,
+				FCA0F5611E70932400D0AA44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCA0F5611E70932400D0AA44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCA0F5601E70932400D0AA44 /* kalender3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCA0F5621E70932400D0AA44 /* kalender3 */ = {
+			isa = PBXGroup;
+			children = (
+				FCA0F5631E70932400D0AA44 /* AppDelegate.swift */,
+				FCA0F5651E70932400D0AA44 /* ViewController.swift */,
+				FCA0F5671E70932400D0AA44 /* Main.storyboard */,
+				FCA0F56D1E70932400D0AA44 /* Assets.xcassets */,
+				FCA0F56F1E70932400D0AA44 /* LaunchScreen.storyboard */,
+				FCA0F5721E70932500D0AA44 /* Info.plist */,
+				FCA0F56A1E70932400D0AA44 /* kalender3.xcdatamodeld */,
+			);
+			path = kalender3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCA0F55F1E70932400D0AA44 /* kalender3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCA0F5751E70932500D0AA44 /* Build configuration list for PBXNativeTarget "kalender3" */;
+			buildPhases = (
+				FCA0F55C1E70932400D0AA44 /* Sources */,
+				FCA0F55D1E70932400D0AA44 /* Frameworks */,
+				FCA0F55E1E70932400D0AA44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kalender3;
+			productName = kalender3;
+			productReference = FCA0F5601E70932400D0AA44 /* kalender3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCA0F5581E70932400D0AA44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Erika Linde";
+				TargetAttributes = {
+					FCA0F55F1E70932400D0AA44 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FCA0F55B1E70932400D0AA44 /* Build configuration list for PBXProject "kalender3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCA0F5571E70932400D0AA44;
+			productRefGroup = FCA0F5611E70932400D0AA44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCA0F55F1E70932400D0AA44 /* kalender3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCA0F55E1E70932400D0AA44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA0F5711E70932400D0AA44 /* LaunchScreen.storyboard in Resources */,
+				FCA0F56E1E70932400D0AA44 /* Assets.xcassets in Resources */,
+				FCA0F5691E70932400D0AA44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCA0F55C1E70932400D0AA44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA0F5661E70932400D0AA44 /* ViewController.swift in Sources */,
+				FCA0F56C1E70932400D0AA44 /* kalender3.xcdatamodeld in Sources */,
+				FCA0F5641E70932400D0AA44 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCA0F5671E70932400D0AA44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCA0F5681E70932400D0AA44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCA0F56F1E70932400D0AA44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCA0F5701E70932400D0AA44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCA0F5731E70932500D0AA44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCA0F5741E70932500D0AA44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCA0F5761E70932500D0AA44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kalender3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Erika.kalender3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FCA0F5771E70932500D0AA44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kalender3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Erika.kalender3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCA0F55B1E70932400D0AA44 /* Build configuration list for PBXProject "kalender3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA0F5731E70932500D0AA44 /* Debug */,
+				FCA0F5741E70932500D0AA44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCA0F5751E70932500D0AA44 /* Build configuration list for PBXNativeTarget "kalender3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA0F5761E70932500D0AA44 /* Debug */,
+				FCA0F5771E70932500D0AA44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FCA0F56A1E70932400D0AA44 /* kalender3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCA0F56B1E70932400D0AA44 /* kalender3.xcdatamodel */,
+			);
+			currentVersion = FCA0F56B1E70932400D0AA44 /* kalender3.xcdatamodel */;
+			path = kalender3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FCA0F5581E70932400D0AA44 /* Project object */;
+}
