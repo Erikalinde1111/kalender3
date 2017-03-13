@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="kalender3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="kalender3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -31,15 +31,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-uZ-Pbb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-uZ-Pbb" userLabel="Cell">
                                 <rect key="frame" x="16" y="101" width="343" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lL3-Fg-oLj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="lL3-Fg-oLj">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lL3-Fg-oLj" id="OZR-hG-S6B">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -47,6 +47,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9ce-lj-VRT"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwv-sB-Tcr">
                                 <rect key="frame" x="16" y="629" width="109" height="30"/>
@@ -57,7 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="NYTT PROJEKT"/>
                                 <connections>
-                                    <segue destination="Nu3-mG-cO6" kind="show" id="N8m-qz-xhB"/>
+                                    <segue destination="Nu3-mG-cO6" kind="show" identifier="newProject" id="Mq1-QS-dKG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7H-9l-1Q8">
@@ -68,7 +71,7 @@
                                 </constraints>
                                 <state key="normal" title="NY SYSSLA"/>
                                 <connections>
-                                    <segue destination="Nu3-mG-cO6" kind="show" id="w53-aS-BaM"/>
+                                    <segue destination="Nu3-mG-cO6" kind="show" identifier="newTask" id="w53-aS-BaM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,15 +92,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SOR-gG-gjo"/>
+                    <connections>
+                        <outlet property="newProjectBtn" destination="wwv-sB-Tcr" id="ZZd-3r-7dy"/>
+                        <outlet property="newTaskBtn" destination="B7H-9l-1Q8" id="ewe-xU-dUn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Activity View Controller-->
         <scene sceneID="R6G-iw-26I">
             <objects>
-                <viewController id="hEV-Lb-Qhk" sceneMemberID="viewController">
+                <viewController id="hEV-Lb-Qhk" customClass="ShowActivityViewController" customModule="kalender3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2TR-h2-bRt"/>
                         <viewControllerLayoutGuide type="bottom" id="er1-0O-aaZ"/>
@@ -185,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="777.66116941529242"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Picker View Controller-->
         <scene sceneID="6Wy-YJ-027">
             <objects>
-                <viewController id="Nu3-mG-cO6" sceneMemberID="viewController">
+                <viewController id="Nu3-mG-cO6" customClass="DatePickerViewController" customModule="kalender3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJh-aj-Yba"/>
                         <viewControllerLayoutGuide type="bottom" id="DDS-wS-Z0K"/>
@@ -245,15 +252,19 @@
                             <constraint firstItem="qfr-MA-uxl" firstAttribute="height" secondItem="bvY-yQ-c84" secondAttribute="height" id="nou-Vd-xeV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePickerEnd" destination="bvY-yQ-c84" id="dIa-hO-XCJ"/>
+                        <outlet property="datePickerStart" destination="qfr-MA-uxl" id="wfW-Xk-zde"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6z1-IV-c00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="816.34182908545733"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Activity View Controller-->
         <scene sceneID="Cnw-91-I2x">
             <objects>
-                <viewController id="ITj-9Q-nX5" sceneMemberID="viewController">
+                <viewController id="ITj-9Q-nX5" customClass="AddActivityViewController" customModule="kalender3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Boc-aG-nJx"/>
                         <viewControllerLayoutGuide type="bottom" id="Npg-9u-sje"/>
@@ -272,9 +283,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="civiuda." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ncV-Uh-l7z">
-                                <rect key="frame" x="16" y="120" width="343" height="34"/>
+                                <rect key="frame" x="16" y="120" width="164" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="EGf-AX-fOA"/>
                                     <constraint firstAttribute="height" constant="34" id="phc-x1-aWc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -283,7 +295,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-Au-YR5">
                                 <rect key="frame" x="16" y="162" width="154" height="221"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -302,7 +313,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hi-Ne-0Au">
-                                <rect key="frame" x="76.5" y="403" width="271.5" height="30"/>
+                                <rect key="frame" x="76.5" y="481" width="271.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jDJ-8A-wbl"/>
                                 </constraints>
@@ -318,30 +329,59 @@
                                 </constraints>
                                 <state key="normal" title="LÄGG TILL PROJEKT"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="civiuda." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-27-DF1">
+                                <rect key="frame" x="195" y="120" width="164" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="g3U-Vr-SN9"/>
+                                    <constraint firstAttribute="height" constant="34" id="wP2-l1-Ihc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7i6-p8-jit">
+                                <rect key="frame" x="277" y="409" width="71" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="oM0-Oc-9uI"/>
+                                </constraints>
+                                <state key="normal" title="Välj bild"/>
+                                <connections>
+                                    <action selector="addImage:" destination="ITj-9Q-nX5" eventType="touchUpInside" id="xhI-Yc-KfF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="PKT-3s-JPo" secondAttribute="leading" id="102-He-A3L"/>
+                            <constraint firstItem="I7i-27-DF1" firstAttribute="trailing" secondItem="jZ6-7Q-7PI" secondAttribute="trailingMargin" id="6c3-ha-0Rf"/>
                             <constraint firstItem="53H-Hm-yN8" firstAttribute="top" secondItem="Boc-aG-nJx" secondAttribute="bottom" constant="8" symbolic="YES" id="8gd-70-vvB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cZp-Au-YR5" secondAttribute="leading" id="AiP-3c-eFl"/>
                             <constraint firstItem="cZp-Au-YR5" firstAttribute="height" secondItem="iO9-3a-YaW" secondAttribute="height" id="Hkz-sf-ZZi"/>
                             <constraint firstItem="9hi-Ne-0Au" firstAttribute="leading" secondItem="PKT-3s-JPo" secondAttribute="trailing" constant="8" id="Ht2-f4-VrH"/>
-                            <constraint firstItem="9hi-Ne-0Au" firstAttribute="top" secondItem="iO9-3a-YaW" secondAttribute="bottom" constant="20" id="HtY-3a-rZU"/>
                             <constraint firstItem="Npg-9u-sje" firstAttribute="top" secondItem="IIY-SP-yEo" secondAttribute="bottom" constant="20" id="IF0-BT-eHS"/>
                             <constraint firstItem="ncV-Uh-l7z" firstAttribute="top" secondItem="53H-Hm-yN8" secondAttribute="bottom" constant="27" id="JR4-AB-3MM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iO9-3a-YaW" secondAttribute="trailing" constant="11" id="Mgh-OT-6fU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9hi-Ne-0Au" secondAttribute="trailing" constant="11" id="N2P-qV-K0d"/>
                             <constraint firstItem="iO9-3a-YaW" firstAttribute="leading" secondItem="cZp-Au-YR5" secondAttribute="trailing" constant="24" id="Okg-zN-xep"/>
                             <constraint firstItem="PKT-3s-JPo" firstAttribute="top" secondItem="cZp-Au-YR5" secondAttribute="bottom" constant="20" id="R4o-YX-0OS"/>
+                            <constraint firstItem="I7i-27-DF1" firstAttribute="top" secondItem="Boc-aG-nJx" secondAttribute="bottom" constant="56" id="RMi-xZ-zJZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7i6-p8-jit" secondAttribute="trailing" constant="11" id="W5y-U5-jLx"/>
+                            <constraint firstItem="7i6-p8-jit" firstAttribute="top" secondItem="iO9-3a-YaW" secondAttribute="bottom" constant="26" id="Xdf-JR-wey"/>
                             <constraint firstItem="iO9-3a-YaW" firstAttribute="top" secondItem="ncV-Uh-l7z" secondAttribute="bottom" constant="8" id="Xub-Mx-iXP"/>
+                            <constraint firstItem="9hi-Ne-0Au" firstAttribute="top" secondItem="7i6-p8-jit" secondAttribute="bottom" constant="42" id="Y3g-Tr-qcK"/>
                             <constraint firstItem="ncV-Uh-l7z" firstAttribute="leading" secondItem="jZ6-7Q-7PI" secondAttribute="leadingMargin" id="bGq-L4-O3C"/>
                             <constraint firstItem="IIY-SP-yEo" firstAttribute="centerX" secondItem="jZ6-7Q-7PI" secondAttribute="centerX" id="j12-Zs-wVI"/>
-                            <constraint firstItem="ncV-Uh-l7z" firstAttribute="trailing" secondItem="jZ6-7Q-7PI" secondAttribute="trailingMargin" id="luz-Xm-CME"/>
                             <constraint firstItem="53H-Hm-yN8" firstAttribute="leading" secondItem="jZ6-7Q-7PI" secondAttribute="leadingMargin" id="oDf-pG-QBc"/>
                             <constraint firstItem="53H-Hm-yN8" firstAttribute="trailing" secondItem="jZ6-7Q-7PI" secondAttribute="trailingMargin" id="yG2-h2-vwy"/>
                             <constraint firstItem="cZp-Au-YR5" firstAttribute="top" secondItem="ncV-Uh-l7z" secondAttribute="bottom" constant="8" id="yhB-8e-PRS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="ncV-Uh-l7z" id="aY9-m6-bKj"/>
+                        <outlet property="dateEnd" destination="I7i-27-DF1" id="lFf-Sg-9o5"/>
+                        <outlet property="image" destination="iO9-3a-YaW" id="gxH-3a-rxK"/>
+                        <outlet property="label" destination="53H-Hm-yN8" id="ZnV-7C-74J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpn-da-s0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,6 +389,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w53-aS-BaM"/>
+        <segue reference="Mq1-QS-dKG"/>
     </inferredMetricsTieBreakers>
 </document>

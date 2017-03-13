@@ -13,6 +13,9 @@
 		FCA0F56C1E70932400D0AA44 /* kalender3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCA0F56A1E70932400D0AA44 /* kalender3.xcdatamodeld */; };
 		FCA0F56E1E70932400D0AA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA0F56D1E70932400D0AA44 /* Assets.xcassets */; };
 		FCA0F5711E70932400D0AA44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA0F56F1E70932400D0AA44 /* LaunchScreen.storyboard */; };
+		FCC2576B1E7188F100CF338A /* ShowActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2576A1E7188F100CF338A /* ShowActivityViewController.swift */; };
+		FCC2576D1E71945800CF338A /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2576C1E71945800CF338A /* AddActivityViewController.swift */; };
+		FCC2576F1E71956A00CF338A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2576E1E71956A00CF338A /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FCA0F56D1E70932400D0AA44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCA0F5701E70932400D0AA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCA0F5721E70932500D0AA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC2576A1E7188F100CF338A /* ShowActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivityViewController.swift; sourceTree = "<group>"; };
+		FCC2576C1E71945800CF338A /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		FCC2576E1E71956A00CF338A /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,9 @@
 		FCA0F5571E70932400D0AA44 = {
 			isa = PBXGroup;
 			children = (
+				FCC2576E1E71956A00CF338A /* DatePickerViewController.swift */,
+				FCC2576C1E71945800CF338A /* AddActivityViewController.swift */,
+				FCC2576A1E7188F100CF338A /* ShowActivityViewController.swift */,
 				FCA0F5621E70932400D0AA44 /* kalender3 */,
 				FCA0F5611E70932400D0AA44 /* Products */,
 			);
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC2576B1E7188F100CF338A /* ShowActivityViewController.swift in Sources */,
 				FCA0F5661E70932400D0AA44 /* ViewController.swift in Sources */,
+				FCC2576F1E71956A00CF338A /* DatePickerViewController.swift in Sources */,
 				FCA0F56C1E70932400D0AA44 /* kalender3.xcdatamodeld in Sources */,
+				FCC2576D1E71945800CF338A /* AddActivityViewController.swift in Sources */,
 				FCA0F5641E70932400D0AA44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +315,7 @@
 				FCA0F5771E70932500D0AA44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
