@@ -78,12 +78,25 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
     var imagePath : String{
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        if let documentDirectory = paths.first {
+        if var imageNumber = UserDefaults.standard.integer(forKey: "imageNumber") as? Int{
+            imageNumber += 1
+            UserDefaults.standard.set(imageNumber, forKey: "imageNumber")
             
-            //Nu kommer alla bilder heta "cached.png" så lägger till en unik siffra med
-            return documentDirectory.appending("/cached\(i).png")
+            if let documentDirectory = paths.first {
+                return documentDirectory.appending("/cached\(imageNumber).png")
+                //Nu kommer alla bilder heta "cached.png" så lägger till en unik siffra med
+            }else{
+                fatalError("No documents directory")
+            }
+
         }else{
-            fatalError("No documents directory")
+            if let documentDirectory = paths.first {
+                return documentDirectory.appending("/cached\(1).png")
+                //Nu kommer alla bilder heta "cached.png" så lägger till en unik siffra med
+            }else{
+                fatalError("No documents directory")
+            }
+
         }
         
     }
