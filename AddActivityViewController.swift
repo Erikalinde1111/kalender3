@@ -11,6 +11,9 @@ import CoreData
 
 class AddActivityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
+    
+    
+    @IBOutlet weak var descript: UITextView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var dateEnd: UITextView!
@@ -146,7 +149,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             project.startDate = date.text
             project.endDate = dateEnd.text
             project.label = label.text
-            project.descript = ""
+            project.descript = descript.text
             project.source = ""
             project.tasks = t1
             
@@ -157,6 +160,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
                 NSLog("Kunde inte spara till core data \(error)")
             }
             //lägga denna request i ViewController
+            /*
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Project")
             
             do {
@@ -167,7 +171,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             }
             catch let error {
                 NSLog("Kunde inte hämta från core data \(error)")
-            }
+            }*/
             
         } else {
             k = defaultID.integer(forKey: "id")
@@ -196,7 +200,8 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             catch let error {
                 NSLog("Kunde inte spara till core data \(error)")
             }
-             //lägga denna request i ViewController
+            
+            /*
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
             
             do {
@@ -206,11 +211,11 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
                 }
             }
             catch let error {
-                NSLog("Kunde inte hämta från core data \(error)")
+                NSLog("Kunde inte hämta från core data \(error)")*/
             }
             
         }
         
     }
     
-}
+

@@ -10,9 +10,17 @@ import UIKit
 
 class ShowActivityViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var project: Project?
+    
+    @IBOutlet weak var desciptOfProject: UITextView!
+    @IBOutlet weak var task: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label.text = "\(project!.label!) \(project!.startDate!) - \(project!.endDate!)"
+        task.text = project!.tasks?.startDate
+        desciptOfProject.text = project?.descript
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +29,11 @@ class ShowActivityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //skriver man in mer text i descript skall core datan 
+    //uppdateras försök att uppdatera för varje gång man skriver
+    //göra ny context och köra saveContext()
+    //men jag vill kalla saveContext() för varje knapptryckning
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

@@ -43,7 +43,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hEV-Lb-Qhk" kind="show" id="WzM-9U-ucg"/>
+                                            <segue destination="hEV-Lb-Qhk" kind="show" identifier="showactivity" id="WzM-9U-ucg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,6 +95,7 @@
                     <connections>
                         <outlet property="newProjectBtn" destination="wwv-sB-Tcr" id="ZZd-3r-7dy"/>
                         <outlet property="newTaskBtn" destination="B7H-9l-1Q8" id="ewe-xU-dUn"/>
+                        <outlet property="table" destination="Uvm-uZ-Pbb" id="WHT-NA-HGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,11 +131,10 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-SA-E1u">
                                 <rect key="frame" x="16" y="223" width="154" height="221"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Källor: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-cs-xQH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syssla: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-cs-xQH">
                                 <rect key="frame" x="16" y="528" width="73" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gfK-Gg-IQt"/>
@@ -144,7 +144,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="www.google.com" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQB-QQ-fmq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQB-QQ-fmq">
                                 <rect key="frame" x="119" y="518" width="240" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -169,6 +169,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="S1v-J8-DjB" secondAttribute="trailing" id="z9N-AC-K42"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="desciptOfProject" destination="bnd-SA-E1u" id="gkb-NS-qvQ"/>
+                        <outlet property="label" destination="5XU-YN-djB" id="RTr-PP-JRg"/>
+                        <outlet property="task" destination="HQB-QQ-fmq" id="SR3-ha-599"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKu-5d-7XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,7 +297,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-Au-YR5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hej" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-Au-YR5">
                                 <rect key="frame" x="16" y="162" width="154" height="221"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -382,6 +387,7 @@
                     <connections>
                         <outlet property="date" destination="ncV-Uh-l7z" id="aY9-m6-bKj"/>
                         <outlet property="dateEnd" destination="I7i-27-DF1" id="lFf-Sg-9o5"/>
+                        <outlet property="descript" destination="cZp-Au-YR5" id="ahx-st-d2t"/>
                         <outlet property="image" destination="iO9-3a-YaW" id="gxH-3a-rxK"/>
                         <outlet property="label" destination="53H-Hm-yN8" id="ZnV-7C-74J"/>
                     </connections>
@@ -392,6 +398,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mq1-QS-dKG"/>
+        <segue reference="w53-aS-BaM"/>
     </inferredMetricsTieBreakers>
 </document>
