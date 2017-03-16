@@ -328,6 +328,9 @@
                                     <constraint firstAttribute="width" constant="166" id="vGp-SF-6Pt"/>
                                 </constraints>
                                 <state key="normal" title="LÄGG TILL PROJEKT"/>
+                                <connections>
+                                    <action selector="addActivity:" destination="ITj-9Q-nX5" eventType="touchUpInside" id="4DG-Oi-K0H"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="civiuda." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-27-DF1">
                                 <rect key="frame" x="195" y="120" width="164" height="34"/>

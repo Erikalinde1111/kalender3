@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Project" representedClassName=".Project" isAbstract="YES" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="projects" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName=".Task" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="projects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="tasks" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Project" positionX="-236" positionY="-27" width="128" height="148"/>
+        <element name="Task" positionX="-18" positionY="-27" width="128" height="148"/>
+    </elements>
 </model>

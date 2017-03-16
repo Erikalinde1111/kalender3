@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC4B5B811E7950FA00091F92 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5B7D1E7950FA00091F92 /* Task+CoreDataClass.swift */; };
+		FC4B5B821E7950FA00091F92 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5B7E1E7950FA00091F92 /* Task+CoreDataProperties.swift */; };
+		FC4B5B831E7950FA00091F92 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5B7F1E7950FA00091F92 /* Project+CoreDataClass.swift */; };
+		FC4B5B841E7950FA00091F92 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5B801E7950FA00091F92 /* Project+CoreDataProperties.swift */; };
 		FCA0F5641E70932400D0AA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0F5631E70932400D0AA44 /* AppDelegate.swift */; };
 		FCA0F5661E70932400D0AA44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0F5651E70932400D0AA44 /* ViewController.swift */; };
 		FCA0F5691E70932400D0AA44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA0F5671E70932400D0AA44 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC4B5B7D1E7950FA00091F92 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "kalender3/Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FC4B5B7E1E7950FA00091F92 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "kalender3/Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FC4B5B7F1E7950FA00091F92 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Project+CoreDataClass.swift"; path = "kalender3/Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FC4B5B801E7950FA00091F92 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Project+CoreDataProperties.swift"; path = "kalender3/Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FCA0F5601E70932400D0AA44 /* kalender3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kalender3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA0F5631E70932400D0AA44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA0F5651E70932400D0AA44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +54,10 @@
 		FCA0F5571E70932400D0AA44 = {
 			isa = PBXGroup;
 			children = (
+				FC4B5B7D1E7950FA00091F92 /* Task+CoreDataClass.swift */,
+				FC4B5B7E1E7950FA00091F92 /* Task+CoreDataProperties.swift */,
+				FC4B5B7F1E7950FA00091F92 /* Project+CoreDataClass.swift */,
+				FC4B5B801E7950FA00091F92 /* Project+CoreDataProperties.swift */,
 				FCC2576E1E71956A00CF338A /* DatePickerViewController.swift */,
 				FCC2576C1E71945800CF338A /* AddActivityViewController.swift */,
 				FCC2576A1E7188F100CF338A /* ShowActivityViewController.swift */,
@@ -150,9 +162,13 @@
 			files = (
 				FCC2576B1E7188F100CF338A /* ShowActivityViewController.swift in Sources */,
 				FCA0F5661E70932400D0AA44 /* ViewController.swift in Sources */,
+				FC4B5B841E7950FA00091F92 /* Project+CoreDataProperties.swift in Sources */,
+				FC4B5B811E7950FA00091F92 /* Task+CoreDataClass.swift in Sources */,
+				FC4B5B831E7950FA00091F92 /* Project+CoreDataClass.swift in Sources */,
 				FCC2576F1E71956A00CF338A /* DatePickerViewController.swift in Sources */,
 				FCA0F56C1E70932400D0AA44 /* kalender3.xcdatamodeld in Sources */,
 				FCC2576D1E71945800CF338A /* AddActivityViewController.swift in Sources */,
+				FC4B5B821E7950FA00091F92 /* Task+CoreDataProperties.swift in Sources */,
 				FCA0F5641E70932400D0AA44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
