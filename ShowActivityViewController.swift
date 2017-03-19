@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
-class ShowActivityViewController: UIViewController {
+class ShowActivityViewController: UIViewController,UITextViewDelegate {
 
     @IBOutlet weak var label: UILabel!
     var project: Project?
+    
     
     @IBOutlet weak var desciptOfProject: UITextView!
     @IBOutlet weak var task: UITextView!
@@ -21,19 +23,21 @@ class ShowActivityViewController: UIViewController {
         label.text = "\(project!.label!) \(project!.startDate!) - \(project!.endDate!)"
         task.text = project!.tasks?.startDate
         desciptOfProject.text = project?.descript
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
-    //skriver man in mer text i descript skall core datan 
-    //uppdateras försök att uppdatera för varje gång man skriver
-    //göra ny context och köra saveContext()
-    //men jag vill kalla saveContext() för varje knapptryckning
-
-   
-
+    
+    //ha denna funktion för att spara ner texten till projectets description
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+        project?.descript = desciptOfProject.text
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+    
+    //nedanstående funktion är för att dismissa keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.desciptOfProject.resignFirstResponder()
+    }
 }

@@ -28,6 +28,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
     let defaultID = UserDefaults.standard
     var t1: Task?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateF = DateFormatter()
@@ -43,21 +44,10 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
         dateEnd.text = strDateEnd
         print(strDateEnd)
         label.text = btnLabelText
-        //strdate blir summan av hur många dar in på året vi är så 1 Jan är 1, 2 Jan är 2 o s v det får va så så länge 
-        // Do any additional setup after loading the view.
-        
+        //strdate blir summan av hur många dar in på året vi är så 1 Jan är 1, 2 Jan är 2 o s v
+       
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func addImage(_ sender: UIButton) {
         i += 1
@@ -66,8 +56,6 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
-        
-       
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -91,20 +79,20 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             UserDefaults.standard.set(imageNumber, forKey: "imageNumber")
             
             if let documentDirectory = paths.first {
+                
                 return documentDirectory.appending("/cached\(imageNumber).png")
-                //Nu kommer alla bilder heta "cached.png" så lägger till en unik siffra med
             }else{
                 fatalError("No documents directory")
             }
-
+            
         }else{
             if let documentDirectory = paths.first {
+                
                 return documentDirectory.appending("/cached\(1).png")
                 //Nu kommer alla bilder heta "cached.png" så lägger till en unik siffra med
             }else{
                 fatalError("No documents directory")
             }
-
         }
         
     }
@@ -152,6 +140,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             project.descript = descript.text
             project.source = ""
             project.tasks = t1
+            //documentDirectory är en string med sökvägen till bilden den strängen skall läggas till varje project
             
             do{
                 try (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -159,19 +148,6 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             catch let error {
                 NSLog("Kunde inte spara till core data \(error)")
             }
-            //lägga denna request i ViewController
-            /*
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Project")
-            
-            do {
-                let projects = try context.fetch(request) as! [Project]
-                for project in projects {
-                    print("\(project.id) har stardatum \(project.startDate) har syssla \(project.tasks?.startDate)")
-                }
-            }
-            catch let error {
-                NSLog("Kunde inte hämta från core data \(error)")
-            }*/
             
         } else {
             k = defaultID.integer(forKey: "id")
